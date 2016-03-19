@@ -74,7 +74,7 @@ class MenuController
       name = gets.chomp
       print "Phone number: "
       phone = gets.chomp
-      pring "Email: "
+      print "Email: "
       email = gets.chomp
 
 # #13 Add a new entry to address_book using add_entry to ensure that the new entry is added in proper order
@@ -90,7 +90,7 @@ class MenuController
     def read_csv
     end
 
-    def entry_submenu
+    def entry_submenu(entry)
 # #16 Display the submenu options
       puts "n - next entry"
       puts "d - delete entry"
