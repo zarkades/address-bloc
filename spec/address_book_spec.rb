@@ -11,6 +11,17 @@ RSpec.describe AddressBook do
     expect(entry.email).to eq expected_email
   end
 
+describe "#detonate" do
+  it "should delete all entries" do
+    book.add_entry("Ada Lovelace", "010.012.1815", "augusta.king@lovelace.com")
+    book.add_entry("Ada Lovelace", "010.012.1815", "augusta.king@lovelace.com")
+    book.add_entry("Ada Lovelace", "010.012.1815", "augusta.king@lovelace.com")
+
+    book.detonate
+    expect(book.entries.size).to eq 0
+  end
+end
+
 # #2 describe and it statements are RSpec paradigm to explain what we are testing. it explains the functionality of the method we're testing
 describe "attributes" do
   it "responds to entries" do
